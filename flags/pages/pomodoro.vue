@@ -83,8 +83,9 @@
         class="bg-gray-100 border border-gray-300 text-gray-900 text-sm rounded-sm md:w-1/2 w-full py-2 px-1"
         placeholder="email"
       /> -->
-      <InputField v-model="name" placeholder="Name" />
-      <InputField v-model="email" type="email" placeholder="Email" />
+      <InputField v-model="name" placeholder="Name" type="text" />
+      <InputField v-model="email" type="email" placeholder="Email"/>
+
       <button
         class="bg-gray-800 py-2 px-6 rounded-full md:w-1/2 w-full text-white"
         @click="startTimer"
