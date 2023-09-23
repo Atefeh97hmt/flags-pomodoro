@@ -10,6 +10,5 @@ const props = defineProps({
   type:string(),
 
 })
-
 const { localModelValue } = useLocalModelValue({ props})
 </script>

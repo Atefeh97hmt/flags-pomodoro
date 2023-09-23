@@ -94,6 +94,7 @@
       </button>
       <button
         class="bg-gray-200 py-2 px-6 rounded-full md:w-1/2 w-full text-white mt-4 text-black"
+        @click="resetTimer()"
       >
         cancle
       </button>
@@ -187,6 +188,26 @@ const startTimer = () => {
   }, 1000);
 };
 // end timer
+
+// timer reset
+// const resetTimer = () => {
+//   value1.value = !value1.value;
+//   value2.value = !value2.value;
+//   minutes.value = 0;
+//   seconds.value = 75;
+//   isRunning.value = false;
+// };
+
+const resetTimer = () => {
+  minutes.value = 0;
+  seconds.value = 75;
+  isRunning.value = false;
+  toggleValue();
+  clearInterval(timer)
+};
+
+// end timer reset
+
 </script>
 
 <style scoped>
