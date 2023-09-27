@@ -13,7 +13,9 @@
     "nuxt": "^3.7.0"
   },
   "dependencies": {
+    "@vee-validate/nuxt": "^4.11.7",
     "lodash": "^4.17.21",
-    "vue-types": "^5.1.1"
+    "vue-types": "^5.1.1",
+    "yup": "^1.3.1"
   }
 }

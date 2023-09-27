@@ -203,7 +203,6 @@ const resetTimer = () => {
   seconds.value = 75;
   isRunning.value = false;
   toggleValue();
-  clearInterval(timer)
 };
 
 // end timer reset
