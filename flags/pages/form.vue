@@ -45,18 +45,24 @@ const { errors, defineInputBinds } = useForm({
   validationSchema: yup.object({
     email: yup.string().email().required(),
     name: yup.string().required().min(2).max(256),
-    // phone: yup.string().required(),
-    // phone: val => (phone(val) ? true : 'Invalid phone'),
-
+    phone: yup.number().required().test((value, context) => {
+        const customPhoneCondition = valid(value)
+        return customPhoneCondition || context.createError({ message: "Please Enter a Correct Phone Number" })
+    }),
   }),
 });
 
 const email = defineInputBinds('email');
 const name = defineInputBinds('name');
+const phone = defineInputBinds('phoneNumber')
 
-//  const phone = defineInputBinds('phone'){
-//     return /^(\\+98|0)?9\\d{9}$/.test(value);
-//  };
+
+const phoneNumberValidation = /^((+98|0)?9\d{9})$/;
+const valid = (phone) => {
+    console.log("phoneNumber ==>", phone)
+    return phone.length && phone.test(phoneNumberValidation)
+}
+
 </script>
 
 
